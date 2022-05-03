@@ -9,6 +9,7 @@ void main() {
   listA[4] = 'Friday';
   listA[5] = 'Saturday';
   listA[6] = 'Sunday ';
+
   for (int i = 0; i < listA.length; i++) {
     print('$i : ${listA[i]}');
   }
