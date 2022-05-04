@@ -17,8 +17,22 @@ main() {
   print(listF);//[user0 message0, user1 message1, user2 message2]
 
 
+  var listG = List.generate(3, (i) => Person('youssef'));
+  print(listG);//[Instance of 'Person', Instance of 'Person', Instance of 'Person']
+  listG.forEach((Person)=> print(Person.name));//youssef youssef youssef
 
 
 
 
+
+
+
+
+
+
+}
+
+class Person{
+  String name;
+  Person(this.name);
 }
