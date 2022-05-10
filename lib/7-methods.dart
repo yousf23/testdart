@@ -27,11 +27,33 @@ main() {
   print(list5.getRange(1, 3)); //(bbbb, cccc)  هنا لم تطبع على شكل قائمة
   print(list5.getRange(1, 3).toList()); //[bbbb, cccc]  هنا طبعة على شكل قائمة
 
-
 // 6.indexof();
-  List<String> list6 = ['aaa', 'bbbb', 'cccc','bbbb'];
+  List<String> list6 = ['aaa', 'bbbb', 'cccc', 'bbbb'];
 
-  print(list6.indexOf('bbbb'));
+  print(list6.indexOf('bbbb', 2));
 
+  //7.indexWhere
+  List<String> list7 = ['red', 'green', 'blue', 'red'];
 
+  print(list7.indexWhere((element) => element == 'red')); //0
+  print(list7.indexWhere((element) => element == 'yellow')); //-1
+
+  //8.insert
+  List<String> list8 = ['red', 'green', 'blue', 'red'];
+
+  list8.insert(3, 'yellow');
+  print(list8); //[red, green, blue, yellow, red]
+
+  //9.insertAll
+  List<String> list9 = ['red', 'green', 'blue', 'red'];
+  list9.insertAll(1, ['yellow', 'orange']);
+  print(list9); //[red, yellow, orange, green, blue, red]
+
+  //10.lastIndexOf();
+  List<String> list10 = ['red', 'green', 'blue', 'red'];
+  print(list10.lastIndexOf('red')); //3
+
+  //11.lastIndexWhere();
+  List<String> list11 = ['red', 'green', 'blue', 'red'];
+  print(list11.lastIndexWhere((element) => element == 'red')); //3
 }
