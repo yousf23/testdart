@@ -56,4 +56,24 @@ main() {
   //11.lastIndexWhere();
   List<String> list11 = ['red', 'green', 'blue', 'red'];
   print(list11.lastIndexWhere((element) => element == 'red')); //3
+
+  //12.remove();
+  List<String> list12 = ['red', 'green', 'blue', 'red'];
+  list12.remove('red');
+  print(list12); //[green, blue, red]
+
+  //13.removeAt();
+  List<String> list13 = ['red', 'green', 'blue', 'red'];
+  list13.removeAt(2);
+  print(list13); //[red, green, red]
+
+  //14.removeLast();
+  List<String> list14 = ['red', 'green', 'blue', 'red'];
+  list14.removeLast();
+  print(list14); //[red, green, blue]
+
+  //15.removeRange();
+  List<String> list15 = ['red', 'green', 'blue', 'red'];
+  list15.removeRange(0, 3);
+  print(list15); //[red]
 }
