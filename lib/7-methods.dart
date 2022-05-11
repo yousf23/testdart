@@ -76,4 +76,23 @@ main() {
   List<String> list15 = ['red', 'green', 'blue', 'red'];
   list15.removeRange(0, 3);
   print(list15); //[red]
+  
+  //16.removeWhere();
+  List<String> list16 = ['red', 'green', 'blue', 'red'];
+  list16.removeWhere((element) => element=='red');
+  print(list16);//[green, blue]
+
+  //17.ReplaceRange();
+
+  List<String> list17 = ['red', 'green', 'blue', 'red'];
+  list17.replaceRange(0, 2, ['youssef','laachari']);
+  print(list17);//[youssef, laachari, blue, red]
+
+  //18.rerainWhere();
+  List<String> list18 = ['red', 'green', 'blue', 'red'];
+  list18.retainWhere((element) => element=='red');
+  print(list18);//[red, red]
+
+
+  
 }
