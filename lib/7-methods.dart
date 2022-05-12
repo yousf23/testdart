@@ -76,23 +76,52 @@ main() {
   List<String> list15 = ['red', 'green', 'blue', 'red'];
   list15.removeRange(0, 3);
   print(list15); //[red]
-  
+
   //16.removeWhere();
   List<String> list16 = ['red', 'green', 'blue', 'red'];
-  list16.removeWhere((element) => element=='red');
-  print(list16);//[green, blue]
+  list16.removeWhere((element) => element == 'red');
+  print(list16); //[green, blue]
 
   //17.ReplaceRange();
 
   List<String> list17 = ['red', 'green', 'blue', 'red'];
-  list17.replaceRange(0, 2, ['youssef','laachari']);
-  print(list17);//[youssef, laachari, blue, red]
+  list17.replaceRange(0, 2, ['youssef', 'laachari']);
+  print(list17); //[youssef, laachari, blue, red]
 
   //18.rerainWhere();
   List<String> list18 = ['red', 'green', 'blue', 'red'];
-  list18.retainWhere((element) => element=='red');
-  print(list18);//[red, red]
+  list18.retainWhere((element) => element == 'red');
+  print(list18); //[red, red]
 
+  //19.setAll();
+  List<String> list19 = ['red', 'green', 'blue', 'red'];
+  list19.setAll(1, ['youssef', 'laachari']); //الاستبدال بدا من 1 الى النهاية
+  print(list19); //[red, youssef, laachari, red]
 
-  
+  //20.setRange();
+  List<String> list20 = ['red', 'green', 'blue', 'red'];
+  list20.setRange(0, 2, ['orange', 'yellow']);
+  print(list20); //[orange, yellow, blue, red]
+
+  //21.shuffle();
+
+  List<String> list21 = ['red', 'green', 'blue', 'red'];
+  list21.shuffle();
+  print(list21);
+
+  //22.sort();
+  List<String> list22 = ['red', 'green', 'blue', 'red'];
+  list22.sort();
+  print(list22); //[blue, green, red, red]
+
+  //23.sublist();
+  List<String> list23 = ['red', 'green', 'blue', 'red'];
+  print(list23.sublist(0, 2)); //هنا حددنا البداية والنهاية
+  print(list23.sublist(2)); //اذا اردنا ان تعطينا العناصر التى بعد 2
+
+  //24.any();
+  List<String> list24 = ['red', 'green', 'blue', 'red'];
+  print(list24.any((element) => element == 'yellow')); //false
+  list24.add('yellow'); //بعد اضافة العنصر
+  print(list24.any((element) => element == 'yellow')); //true
 }
