@@ -124,4 +124,15 @@ main() {
   print(list24.any((element) => element == 'yellow')); //false
   list24.add('yellow'); //بعد اضافة العنصر
   print(list24.any((element) => element == 'yellow')); //true
+
+  //25.contains();
+  List<String> list25 = ['red', 'green', 'blue', 'red'];
+  list25.contains('orange'); //false
+  list25.add('orange'); //هنا اظفنا العنصر
+  list25.contains('orange'); //true
+
+  //26.element();
+  List<String> list26 = ['red', 'green', 'blue', 'red'];
+  print(list26[1]); //الطريقة الاولى درستها في السابق
+  print(list26.elementAt(1));
 }
