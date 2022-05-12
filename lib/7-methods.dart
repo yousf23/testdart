@@ -135,4 +135,8 @@ main() {
   List<String> list26 = ['red', 'green', 'blue', 'red'];
   print(list26[1]); //الطريقة الاولى درستها في السابق
   print(list26.elementAt(1));
+
+  //27.evry();
+  List<int> list27 = [40, 50, 30, 10];
+  print(list27.every((element) => element >= 10)); //true
 }
