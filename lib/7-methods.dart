@@ -139,4 +139,18 @@ main() {
   //27.evry();
   List<int> list27 = [40, 50, 30, 10];
   print(list27.every((element) => element >= 10)); //true
+
+  //expand();
+  List<int> list28 = [40, 50, 30, 10];
+  print(list28.expand((element) => [element,element+1]).toList());//[40, 41, 50, 51, 30, 31, 10, 11]
+
+
+  //29.firstWhere();
+  List<String> list29 = ['red', 'green', 'blue', 'red'];
+  print(list29.firstWhere((element) => element=='yellow',orElse: ()=>'no element'));//no element
+
+
+
+
+
 }
