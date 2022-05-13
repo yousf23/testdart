@@ -142,15 +142,44 @@ main() {
 
   //expand();
   List<int> list28 = [40, 50, 30, 10];
-  print(list28.expand((element) => [element,element+1]).toList());//[40, 41, 50, 51, 30, 31, 10, 11]
-
+  print(list28
+      .expand((element) => [element, element + 1])
+      .toList()); //[40, 41, 50, 51, 30, 31, 10, 11]
 
   //29.firstWhere();
   List<String> list29 = ['red', 'green', 'blue', 'red'];
-  print(list29.firstWhere((element) => element=='yellow',orElse: ()=>'no element'));//no element
+  print(list29.firstWhere((element) => element == 'yellow',
+      orElse: () => 'no element')); //no element
 
+  // //30.fold();
+  var listF = [70, 20, 10];
+  var result = listF.fold(
+      0, (int previousValue, int element) => element + previousValue);
+  print(result); //100
 
+  //31.forEach();
+  List<int> list31 = [40, 50, 30, 10];
+  list31.forEach((element) => print(element * element));
 
+  //32.join();
+  List<int> list32 = [40, 50, 30, 10];
+  print(list32.join()); //40503010
+  print(list32.join('   ')); //40   50   30   10
+  print(list32.join(', ')); //40, 50, 30, 10
 
+  //33.lastWhere();
+  List<int> list33 = [40, 50, 30, 10];
+  print(list33.lastWhere((element) =>
+      element % 5 == 0)); //يعطيني العنصر الاخير الذي ناتج تقسيمه على 5 يساوي 0
 
+  //34.reduce();
+  List<int> list34 = [40, 50, 30, 10];
+  print(list34.reduce((a, b) => b + a)); //130
+
+  //35.singleWhere();
+  List<String> list35 = ['red', 'green', 'blue', 'red'];
+  print(list35.singleWhere((element) => element == 'blue',
+      orElse: () => 'no element')); //blue
+  print(list35.singleWhere((element) => element == 'orange',
+      orElse: () => 'no element')); //no element
 }
