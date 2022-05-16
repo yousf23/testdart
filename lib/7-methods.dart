@@ -182,4 +182,20 @@ main() {
       orElse: () => 'no element')); //blue
   print(list35.singleWhere((element) => element == 'orange',
       orElse: () => 'no element')); //no element
+
+  //36.skip();
+  List<String> list36 = ['red', 'green', 'blue', 'red'];
+  print(list36.skip(2).toList()); //[blue, red]
+
+  //37.skipWhile();
+  List<String> list37 = ['red', 'red', 'blue', 'yellow'];
+  print(list37.skipWhile((value) => value == 'red').toList()); //[blue, yellow]
+
+  //38.take();
+  List<String> list38 = ['red', 'green', 'blue', 'red'];
+  print(list38.take(1).toList()); //[red]
+
+  //39.takeWhile();
+  List<String> list39 = ['red', 'red', 'blue', 'red'];
+  print(list39.takeWhile((value) => value == 'red').toList());
 }
