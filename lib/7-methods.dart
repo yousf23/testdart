@@ -197,5 +197,13 @@ main() {
 
   //39.takeWhile();
   List<String> list39 = ['red', 'red', 'blue', 'red'];
-  print(list39.takeWhile((value) => value == 'red').toList());
+  print(list39.takeWhile((value) => value == 'red').toList()); //[red, red]
+
+  //40.where();
+  List<String> list40 = ['red', 'red', 'blue', 'red'];
+  print(list40.where((element) => element == 'red').toList()); //[red, red, red]
+
+  //41.whereType();
+  List<dynamic> list41 = ['red', 'red', 50, 100];
+  print(list41.whereType<int>().toList()); //[50, 100]
 }
