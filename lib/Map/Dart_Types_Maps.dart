@@ -43,7 +43,7 @@ main() {
   print(mapD.runtimeType);
   print(mapD);
 
-
+//SplayTreeMap
   var mapK = SplayTreeMap<String,int>();//هنا الترتيب بحسب الحروف او الارقام في key
   mapK['morocco'] = 212;
   mapK['algeria'] = 213;
