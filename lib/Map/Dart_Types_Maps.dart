@@ -12,7 +12,7 @@ main() {
   print(mapA);
 
   //LinkedHashMap الطريقة 1
-  var mapB = <String, int>{};//الترتيب حسب عملية الادخال
+  var mapB = <String, int>{}; //الترتيب حسب عملية الادخال
   mapB['morocco'] = 212;
   mapB['algeria'] = 213;
   mapB['egypt'] = 20;
@@ -44,12 +44,13 @@ main() {
   print(mapD);
 
 //SplayTreeMap
-  var mapK = SplayTreeMap<String,int>();//هنا الترتيب بحسب الحروف او الارقام في key
+  var mapK =
+      SplayTreeMap<String, int>(); //هنا الترتيب بحسب الحروف او الارقام في key
   mapK['morocco'] = 212;
   mapK['algeria'] = 213;
   mapK['egypt'] = 20;
   mapK['syria'] = 963;
   mapK['iraq'] = 964;
-  print(mapK.runtimeType);
+  mapK.addAll({'ddffd': 55});
   print(mapK);
 }
