@@ -43,4 +43,37 @@ void main() {
   //8.lookup method
   var setCC = <int>{1, 2, 7, 4};
   print(setCC.lookup(1)); //1
+
+  //9.remove method
+  var setQQ = <int>{1, 2, 7, 4};
+  print(setAA.remove(2));
+  print(setQQ); //{1, 2, 7, 4}
+
+  //10.removeAll method
+  var setWW = <int>{1, 2, 7, 4};
+  setWW.removeAll({1, 2});
+  print(setWW); //{7, 4}
+
+  //11.removeWhere method
+  var setEE = <int>{10, 5, 7, 33};
+  setEE.removeWhere((element) => element % 5 == 0);
+  print(setEE); //{7, 33}
+
+  //12.retainAll method
+  var setRR = <int>{10, 5, 7, 33};
+  setRR.retainAll({33, 5});
+  print(setRR); //{5, 33}
+
+  //13.retainWhere method
+  var setTT = <int>{10, 5, 7, 33};
+  setTT.retainWhere((element) => element % 5 == 0);
+  print(setTT); //{10, 5}
+
+  //14
+
+  //15.union method
+  var setYY = <int>{5, 2, 7, 4};
+  var setUU = <int>{1, 9, 8, 6};
+  var result = setUU.union(setYY);
+  print(result); //{1, 9, 8, 6, 5, 2, 7, 4}
 }
