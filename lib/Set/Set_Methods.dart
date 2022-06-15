@@ -76,4 +76,57 @@ void main() {
   var setUU = <int>{1, 9, 8, 6};
   var result = setUU.union(setYY);
   print(result); //{1, 9, 8, 6, 5, 2, 7, 4}
+
+  //16.anyMethod
+  var setO = <int>{10, 5, 7, 33};
+  print(setO.any((element) => element % 3 == 0)); //true
+
+  //17.elementAt method
+  var setPP = <String>{'aaa', 'bbb', 'ccc', 'ddd'};
+  print(setPP.elementAt(0)); //aaa
+
+  //18.everyMethod
+  var setSS = <int>{10, 5, 7, 33};
+  print(setSS.every((element) => element > 0)); //true
+
+  //20.firstWhere method
+  var setFF = <int>{10, 5, 7, 33};
+  var resulFF = setFF.firstWhere((element) => element % 5 == 0);
+  print(resulFF); //10
+
+  var result2 =
+      setFF.firstWhere((element) => element % 7 == 0, orElse: () => 0);
+  print(result2); //7
+  var result3 =
+      setFF.firstWhere((element) => element % 8 == 0, orElse: () => 0);
+  print(result3); //Bad state: No element
+
+  //21.fold<T> method
+  var setGG = <int>{10, 5, 7, 33};
+  var resultGG = setGG.fold(20, (dynamic value, element) => value + element);
+  print(resultGG);
+
+  //22.followedBy method
+
+  var setHH1 = <int>{50, 40, 10};
+  var setHH2 = <int>{60, 70, 80};
+  var resulHH = setHH1.followedBy(setHH2).toSet();
+  print(resulHH);
+
+  //23.ForEach method
+  var setJJ = <int>{50, 40, 10};
+  setJJ.forEach((element) => print(element));
+
+  //24.join method
+
+  var setKK = <int>{55, 12, 63};
+  print(setKK.join('   ')); //55   12   63
+  print(setKK.join()); //551263
+
+  //25.lastWhere method
+
+  var setLL = <int>{55, 12, 50};
+  var resultLL1 =
+      setLL.lastWhere((element) => element % 5 == 0, orElse: () => 0);
+  print(resultLL1);
 }
