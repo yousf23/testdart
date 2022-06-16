@@ -107,7 +107,6 @@ void main() {
   print(resultGG);
 
   //22.followedBy method
-
   var setHH1 = <int>{50, 40, 10};
   var setHH2 = <int>{60, 70, 80};
   var resulHH = setHH1.followedBy(setHH2).toSet();
@@ -118,15 +117,44 @@ void main() {
   setJJ.forEach((element) => print(element));
 
   //24.join method
-
   var setKK = <int>{55, 12, 63};
   print(setKK.join('   ')); //55   12   63
   print(setKK.join()); //551263
 
   //25.lastWhere method
-
   var setLL = <int>{55, 12, 50};
   var resultLL1 =
       setLL.lastWhere((element) => element % 5 == 0, orElse: () => 0);
   print(resultLL1);
+
+  //26.map<T> method
+  var setZZ = <int>{5, 7, 3};
+  var resultZZ = setZZ.map((element) => element + element).toSet();
+  print(resultZZ); //{10, 14, 6}
+
+  //27.reduce method
+  var setXX = <int>{71, 45, 7};
+  var resulXX = setXX.reduce((value, element) => value + element);
+  print(resulXX); //123
+
+  // //28.singleWhere method
+  // var setVV = <int>{14, 5, 30};
+  // var resultVV = setVV.singleWhere((element) => element == 2, orElse: () => 0);
+  // print(resultVV); //0
+  // var resultVV2 = setVV.singleWhere((element) => element % 5 == 0);
+  // print(resultVV2); //Bad state: Too many elements
+
+  //29.skip method
+  var setNN = <int>{15, 47, 42, 48, 74};
+  var resulNN = setNN.skip(2).reduce((value, element) => value + element);
+  print(resulNN);
+
+  //30.take method
+  var setMM = <int>{15, 47, 42, 48, 74};
+  var resultMM = setMM.take(2).reduce((value, element) => value + element);
+  print(resultMM);
+
+  //31.takeWhile method
+  var setM1 = <int>{15, 10, 42, 48, 20};
+  print(setM1.takeWhile((value) => value % 5 == 0)); //(15, 20)
 }
