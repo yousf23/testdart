@@ -157,4 +157,20 @@ void main() {
   //31.takeWhile method
   var setM1 = <int>{15, 10, 42, 48, 20};
   print(setM1.takeWhile((value) => value % 5 == 0)); //(15, 20)
+
+  //32.toList method
+
+  var setM2 = <int>{15, 10, 42, 48, 20};
+  var listM2 = setM2.toList(growable: true);
+  print(listM2); //[15, 10, 42, 48, 20]
+
+  //33 where method
+  var setAS = <int>{10, 50, 80, 47};
+  var resultAS = setAS.where((element) => element > 40).toSet();
+  print(resultAS); //{50, 80, 47}
+
+  //34.whereType method
+  var setAD = <num>{10.0, 50, 80.0, 47};
+  var resultAD = setAD.whereType<double>().toSet();
+  print(resultAD); //{10.0, 80.0}
 }
