@@ -1,10 +1,7 @@
 void main() {
-  var shape1 = Shape('green');
-  var shape2 = Shape.named('bleu');
-  shape1.printColor();
-  shape2.printColor();
   var koko = Circle(15, 'yuyuyuy');
   koko.getArea();
+  Circle.lawn;
 }
 
 class Shape {
@@ -27,6 +24,11 @@ class Circle extends Shape {
   Circle.named(this.rad, String color) : super.named(color);
 
   void getArea() {
-    print('get area$color$rad');
+    print('get area  ${rad * rad}');
+  }
+
+  static String lawn = 'yellow';
+  static void printLawn() {
+    print('lawn $lawn');
   }
 }
