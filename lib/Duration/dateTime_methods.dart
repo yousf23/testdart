@@ -13,4 +13,20 @@ void main() {
 
   //7.subtract()
   print(timeA.subtract(Duration(hours: 3)));
+
+  //8.toIso8601String
+  print(timeA.toIso8601String()); //2022-06-20T10:06:08.868154
+
+  //9.isUTC
+  print(timeB.isUtc); //false
+
+  //10.toUTC()
+  print(timeB.toUtc());
+
+  //11.prase()
+  var timeD = DateTime.parse('2020-02-02 22:30');
+  print(timeD); //2020-02-02 22:30:00.000
+
+  var timeS = DateTime.tryParse('2020-02-02');
+  print(timeS); //2020-02-02 00:00:00.000
 }
