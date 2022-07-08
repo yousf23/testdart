@@ -17,6 +17,10 @@ class Circel extends Shape {
 
   @override
   void getArea() {
+<<<<<<< HEAD
     // TODO: implement getAreaتنتنت
+=======
+    // TODO: implement getArea
+>>>>>>> origin/master
   }
 }
